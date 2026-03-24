@@ -1,0 +1,15 @@
+
+<label for="city-select">Chọn thành phố:</label>
+
+<select id="city-select" [(ngModel)]="selectedCity">
+  <option value="" disabled>--Chọn--</option>
+  <!-- Sử dụng *ngFor để lặp qua mảng -->
+  <option *ngFor="let city of cities" [value]="city.id">
+    {{ city.name }}
+  </option>
+</select>
+
+
+<div id ="dataContainer">
+</div>
+<button (click)="getData()">Get Data</button>
